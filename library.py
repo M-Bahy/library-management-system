@@ -21,6 +21,7 @@ class Library:  # methods to add books, remove books, and search for books.
         for book in self.books:
             if title == book.get_title():
                 print(book)
+                return book
 
     def get_name(self):
         return self.__name
