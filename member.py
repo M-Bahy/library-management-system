@@ -20,7 +20,7 @@ class Member:  # name, ID, and a list of borrowed books.
         if book in library.books:
             self.borrowed_books.append(book)
             library.remove_book(book)
-            book.set_avilability(False)
+            book.set_availability(False)
         else:
             print("Book not found")
 

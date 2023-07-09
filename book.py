@@ -7,9 +7,18 @@ class Book:  # title, author, ISBN, availability status,
         self.__availability = True
 
     def __str__(self):
-        return "Title: " + self.__title + " Author: " + self.__author \
-            + " Price: " + str(self.__price) + " ISBN: " + self.__ISBN \
-            + " Availability: " + str(self.__availability)
+        return (
+            "Title: "
+            + self.__title
+            + " Author: "
+            + self.__author
+            + " Price: "
+            + str(self.__price)
+            + " ISBN: "
+            + self.__ISBN
+            + " Availability: "
+            + str(self.__availability)
+        )
 
     def get_title(self):
         return self.__title
