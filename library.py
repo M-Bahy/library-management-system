@@ -5,20 +5,20 @@ class Library: #Managing the collection of books, providing methods to add books
     def __init__(self, name):
         self.__name = name
         
-    def addBook(self, book):
+    def add_book(self, book):
         if self.books == None:
             self.books = []
         self.books.append(book)
         
         
-    def removeBook(self, book):
+    def remove_book(self, book):
         if self.books == None:
             self.books = []
         if book in self.books:
             self.books.remove(book)
         
             
-    def searchByTitle(self, title):
+    def search_by_title(self, title):
         if self.books == None:
             self.books = []
         pattern = "*{}*".format("*".join(title))
@@ -28,5 +28,5 @@ class Library: #Managing the collection of books, providing methods to add books
         else:
             print(filtered_books)
 
-    def getName(self):
+    def get_name(self):
         return self.__name

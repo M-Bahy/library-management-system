@@ -11,15 +11,15 @@ class Book : #title, author, ISBN, availability status,
     + " Price: " + str(self.__price) + " ISBN: " + self.__ISBN \
     + " Availability: " + str(self.__availability)
     
-    def getTitle(self) :
+    def get_title(self) :
         return self.__title
-    def getAuthor(self) :
+    def get_author(self) :
         return self.__author
-    def getPrice(self) :
+    def get_price(self) :
         return self.__price
-    def getISBN(self) :
+    def get_ISBN(self) :
         return self.__ISBN
-    def getAvailability(self) :
+    def get_availability(self) :
         return self.__availability
-    def setAvilability(self, availability) :
+    def set_avilability(self, availability) :
         self.__availability = availability

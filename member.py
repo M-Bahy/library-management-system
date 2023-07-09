@@ -7,27 +7,27 @@ class Member : # name, ID, and a list of borrowed books.
     def __str__(self) :
         return "Name : " + self.__name + ", ID : " + str(self.__id)
     
-    def getName(self) :
+    def get_name(self) :
         return self.__name
-    def getID(self) :
+    def get_id(self) :
         return self.__id
     
-    def borrowBook(self, book , library) :
+    def borrow_book(self, book , library) :
         if self.borrowed_books == None:
             self.borrowed_books = []
         if book in library.books:
             self.borrowed_books.append(book)
-            library.removeBook(book)
-            book.setAvilability(False)
+            library.remove_book(book)
+            book.set_avilability(False)
         else:
             print("Book not found")
             
-    def returnBook(self, book, library) :
+    def return_book(self, book, library) :
         if self.borrowed_books == None:
             self.borrowed_books = []
         if book in self.borrowed_books:
             self.borrowed_books.remove(book)
-            library.addBook(book)
-            book.setAvilability(True)
+            library.add_book(book)
+            book.set_avilability(True)
         else:
             print("Book not found")
