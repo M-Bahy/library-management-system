@@ -18,3 +18,4 @@ m2 = Member("Ali", 2)
 m3 = Member("Mahmoud", 3)
 
 library.search_by_title("Harry Potter")
+m1.borrow_book(b1, library)
