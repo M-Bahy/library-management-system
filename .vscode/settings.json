@@ -1,6 +1,7 @@
 {
-    "python.formatting.provider": "none",
-    "editor.defaultFormatter": "ms-python.black-formatter",
+"json.schemaDownload.enable": true,
+"python.formatting.provider": "none",
+"editor.defaultFormatter": "ms-python.black-formatter",
 "python.formatting.blackArgs": [
     "--line-length",
     "79"
