@@ -10,10 +10,10 @@
 "python.linting.flake8Args": [
     "--max-line-length=88"
 ],
-"python.sortImports.args": [
+"isort.args": [
     "--profile",
     "black"
 ],
-"python.sortImports.path": "isort"
+"isort.path": ["isort"]
 
 }
