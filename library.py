@@ -1,6 +1,3 @@
-import fnmatch
-
-
 class Library:  # methods to add books, remove books, and search for books.
     books = None
 
@@ -21,14 +18,9 @@ class Library:  # methods to add books, remove books, and search for books.
     def search_by_title(self, title):
         if self.books is None:
             self.books = []
-        pattern = "*{}*".format("*".join(title))
-        filtered_books = [
-            b for b in self.books if fnmatch.fnmatchcase(b, pattern)
-        ]
-        if len(filtered_books) == 0:
-            print("No books found")
-        else:
-            print(filtered_books)
+        for book in self.books:
+            if title == book.get_title():
+                print(book)
 
     def get_name(self):
         return self.__name
