@@ -15,14 +15,8 @@
     "--profile",
     "black"
 ],
-"isort.path": ["isort"]
-// "[python]": {
-//     "editor.defaultFormatter": "ms-python.black-formatter"
-//   }
-,
+"isort.path": ["isort"],
 
-"[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true
-  }
+"editor.formatOnSave": true
+
 }
