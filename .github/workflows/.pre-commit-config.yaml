@@ -7,13 +7,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-#       - name: Install dependencies
-#         run: pip install -r requirements.txt
-      - name: Run linters
-        uses: PyCQA/flake8-action@v2
+      - name: Run flake8
+        uses: github/codeql-action/init@v1
+      - name: Format imports
+        uses: ambv/black@v21.9b0
         with:
-          max-line-length: 79
-      - name: Sort imports
-        uses: PyCQA/isort-action@v2
-        with:
-          profile: black
+          args: .
