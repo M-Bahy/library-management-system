@@ -1,4 +1,4 @@
-class Member:  # name, ID, and a list of borrowed books.
+class Member:
     borrowed_books = None
 
     def __init__(self, name, age):
@@ -22,7 +22,7 @@ class Member:  # name, ID, and a list of borrowed books.
             library.remove_book(book)
             book.set_availability(False)
         else:
-            print("Book not found")
+            raise Exception("Book not found")
 
     def return_book(self, book, library):
         if self.borrowed_books is None:
@@ -32,4 +32,4 @@ class Member:  # name, ID, and a list of borrowed books.
             library.add_book(book)
             book.set_availability(True)
         else:
-            print("Book not found")
+            raise Exception("Book not found")

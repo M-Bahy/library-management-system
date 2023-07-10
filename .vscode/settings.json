@@ -18,6 +18,9 @@
 ],
 "isort.path": ["isort"],
 
-"editor.formatOnSave": true
+"editor.formatOnSave": true,
+"python.analysis.extraPaths": [
+    "./src"
+]
 
 }

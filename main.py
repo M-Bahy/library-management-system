@@ -1,6 +1,6 @@
-from member import Member
-from library import Library
-from book import Book
+from src.book import Book
+from src.library import Library
+from src.member import Member
 
 library = Library("GUC")
 b1 = Book("Harry Potter", "J.K. Rowling", 100, "1234")
