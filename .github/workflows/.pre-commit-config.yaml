@@ -10,6 +10,6 @@ jobs:
       - name: Run flake8
         uses: github/codeql-action/init@v1
       - name: Format imports
-        uses: ambv/black@v21.9b0
+        uses: ambv/black@v2
         with:
           args: .
