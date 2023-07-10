@@ -1,3 +1,6 @@
+on:
+  push:
+    branches: [ main ]
 repos:
   - repo: https://github.com/PyCQA/flake8
     rev: 6.0.0
