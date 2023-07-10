@@ -1,9 +1,9 @@
 class Member:
-    borrowed_books = None
+    borrowed_books = []
 
-    def __init__(self, name, age):
+    def __init__(self, name, id):
         self.__name = name
-        self.__id = age
+        self.__id = id
 
     def __str__(self):
         return "Name : " + self.__name + ", ID : " + str(self.__id)
@@ -15,21 +15,15 @@ class Member:
         return self.__id
 
     def borrow_book(self, book, library):
-        if self.borrowed_books is None:
-            self.borrowed_books = []
-        if book in library.books:
-            self.borrowed_books.append(book)
-            library.remove_book(book)
-            book.set_availability(False)
-        else:
+        if book not in library.books:
             raise Exception("Book not found")
+        self.borrowed_books.append(book)
+        library.remove_book(book)
+        book.set_availability(False)
 
     def return_book(self, book, library):
-        if self.borrowed_books is None:
-            self.borrowed_books = []
-        if book in self.borrowed_books:
-            self.borrowed_books.remove(book)
-            library.add_book(book)
-            book.set_availability(True)
-        else:
+        if book not in library.books:
             raise Exception("Book not found")
+        self.borrowed_books.remove(book)
+        library.add_book(book)
+        book.set_availability(True)
