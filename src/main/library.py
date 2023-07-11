@@ -1,12 +1,12 @@
 class Library:
-    # books = []
-
     def __init__(self, name):
         self.__name = name
         self.books = []
+        self.ids = []
 
     def add_book(self, book):
         self.books.append(book)
+        self.ids.append(book.get_isbn())
 
     def remove_book(self, book):
         if book in self.books:

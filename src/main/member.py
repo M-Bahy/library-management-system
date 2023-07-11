@@ -1,9 +1,8 @@
 class Member:
-    borrowed_books = []
-
     def __init__(self, name, id):
         self.__name = name
         self.__id = id
+        self.borrowed_books = []
 
     def __str__(self):
         return "Name : " + self.__name + ", ID : " + str(self.__id)
@@ -22,7 +21,7 @@ class Member:
         book.set_availability(False)
 
     def return_book(self, book, library):
-        if book not in library.books:
+        if book.get_isbn() not in library.ids:
             raise Exception("Book not found")
         self.borrowed_books.remove(book)
         library.add_book(book)
