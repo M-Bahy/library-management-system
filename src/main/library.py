@@ -12,9 +12,7 @@ class Library:
             self.books.remove(book)
 
     def search_by_title(self, title):
-        filtered_books = [
-            book for book in self.books if title == book.get_title()
-        ]
+        filtered_books = [book for book in self.books if title == book.get_title()]
         if not filtered_books:
             raise Exception("No book with this title")
         else:
