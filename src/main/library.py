@@ -1,8 +1,9 @@
 class Library:
-    books = []
+    # books = []
 
     def __init__(self, name):
         self.__name = name
+        self.books = []
 
     def add_book(self, book):
         self.books.append(book)
@@ -12,7 +13,9 @@ class Library:
             self.books.remove(book)
 
     def search_by_title(self, title):
-        filtered_books = [book for book in self.books if title == book.get_title()]
+        filtered_books = [
+            book for book in self.books if title == book.get_title()
+        ]
         if not filtered_books:
             raise Exception("No book with this title")
         else:

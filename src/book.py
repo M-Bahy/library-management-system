@@ -20,6 +20,19 @@ class Book:
             + str(self.__availability)
         )
 
+    def __repr__(self):
+        return (
+            "Book("
+            + repr(self.__title)
+            + ", "
+            + repr(self.__authors)
+            + ", "
+            + repr(self.__price)
+            + ", "
+            + repr(self.__isbn)
+            + ")"
+        )
+
     def get_title(self):
         return self.__title
 
