@@ -40,18 +40,6 @@ class TestMember(unittest.TestCase):
         self.assertEqual(len(self.member.borrowed_books), 0)
         self.assertEqual(len(self.library.books), 3)
         self.assertTrue(self.book2.get_availability())
-        # m = Member("John Doe", 12345)
-        # l = Library("Alexandria Library")
-        # b = Book("The Alchemist", "Paulo Coelho", 5, "9780061122415")
-        # l.add_book(b)
-        # print(m.borrowed_books)
-        # m.borrow_book(b, l)
-        # print(m.borrowed_books)
-        # self.assertEqual(len(m.borrowed_books), 1)
-        # print(l.books)
-        # m.return_book(b, l)
-        # print(m.borrowed_books)
-        # self.assertEqual(len(m.borrowed_books), 0)
 
     def test_borrow_nonexistent_book(self):
         with self.assertRaises(Exception):
@@ -68,5 +56,5 @@ class TestMember(unittest.TestCase):
             )
 
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#     unittest.main()

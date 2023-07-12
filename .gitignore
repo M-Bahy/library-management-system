@@ -6,3 +6,6 @@ src/__pycache__/library.cpython-311.pyc
 src/main/__pycache__/book.cpython-311.pyc
 src/main/__pycache__/library.cpython-311.pyc
 src/main/__pycache__/member.cpython-311.pyc
+src/tests/__pycache__/test_member.cpython-311.pyc
+src/tests/__pycache__/test_book.cpython-311.pyc
+src/tests/__pycache__/test_library.cpython-311.pyc
